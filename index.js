@@ -1,5 +1,5 @@
 function solicitudAJAX(params) {
-  var url = "https://pokeapi.co/api/v2/pokemon/";
+  var url = "https://pokeapi.co/api/v2/pokemon?limit=2000";
   let tarjetas = document.querySelector("#nPokemon");
   var objXMLHttpRequest = new XMLHttpRequest();
 
@@ -73,7 +73,7 @@ function buscar() {
           let nombre = json.name;
           let uriImg = json.sprites.other.home.front_default;
           let html =
-            `<div class="card" style="width: 18rem;">
+            `<div class="card" style="width: 18rem; background-color: rgba(128, 128, 128, 0); border: none;">
   <img src="` +
             uriImg +
             `" class="card-img-top" alt="...">
