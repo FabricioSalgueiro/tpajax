@@ -42,7 +42,9 @@ function buscarPorURL(urlPokemon) {
           nombre +
           `</h5>
     <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="https://www.pokemon.com/el/pokedex/`+
+          nombre +
+    `" class="btn btn-primary">Mas informacion</a>
   </div>
 </div>`;
         div.appendChild(html);
@@ -70,7 +72,7 @@ function buscar() {
       if (objXMLHttpRequest.readyState === 4) {
         if (objXMLHttpRequest.status === 200) {
           let json = JSON.parse(objXMLHttpRequest.responseText);
-          let nombre = json.name;
+          let nombre = json.species.name;
           let uriImg = json.sprites.other.home.front_default;
           let html =
             `<div class="card" style="width: 18rem; background-color: rgba(128, 128, 128, 0); border: none;">
@@ -82,7 +84,9 @@ function buscar() {
             nombre +
             `</h5>
     <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="https://www.pokemon.com/el/pokedex/`+
+    nombre +
+    `" class="btn btn-primary">Mas informacion</a>
   </div>
 </div>`;
           tarjetas.innerHTML = html;
