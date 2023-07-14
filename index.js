@@ -34,6 +34,7 @@ function buscarPorURL(urlPokemon) {
 
         let html =
           `<div class="card" style="width: 18rem;">
+          
   <img src="` +
           uriImg +
           `" class="card-img-top" alt="...">
@@ -75,7 +76,8 @@ function buscar() {
           let nombre = json.species.name;
           let uriImg = json.sprites.other.home.front_default;
           let html =
-            `<div class="card" style="width: 18rem; background-color: rgba(128, 128, 128, 0); border: none;">
+          
+            `<div class="card" style="width: 18rem; background-color: rgb(255, 0, 0); border: black 5px solid;">
   <img src="` +
             uriImg +
             `" class="card-img-top" alt="...">
@@ -89,6 +91,7 @@ function buscar() {
     `" class="btn btn-primary">Mas informacion</a>
   </div>
 </div>`;
+
           tarjetas.innerHTML = html;
         } else {
           alert("Error Code: " + objXMLHttpRequest.status);
